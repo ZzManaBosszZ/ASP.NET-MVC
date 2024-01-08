@@ -14,17 +14,18 @@ public static class SeedData
             serviceProvider.GetRequiredService<
                 DbContextOptions<SchoolContext>>()))
         {
-            // Look for any movies.
+            //Look for any Student.
             if (context.Students.Any())
-            {
-                return;   // DB has been seeded
-            }
+                {
+                    return;   // DB has been seeded
+                }
+
             context.Students.AddRange(
                 new Student
                 {
-                 FirstMidName="Carson",LastName="Alexander",EnrollmentDate=DateTime.Parse("2005-09-01"),
-    
-            
+                    FirstMidName = "Carson",
+                    LastName = "Alexander",
+                    EnrollmentDate = DateTime.Parse("2005-09-01"),
                 },
                 new Student
                 {
