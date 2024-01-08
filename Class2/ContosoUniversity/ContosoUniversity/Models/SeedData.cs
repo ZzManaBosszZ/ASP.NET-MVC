@@ -46,6 +46,7 @@ public static class SeedData
                     EnrollmentDate = DateTime.Parse("2002-09-01")
                 }
             );
+            context.SaveChanges();
 
             context.Courses.AddRange(
                new Course
@@ -53,8 +54,6 @@ public static class SeedData
                    CourseID = 1050,
                    Title = "Chemistry",
                    Credits = 3
-
-
                },
                new Course
                {
@@ -75,11 +74,12 @@ public static class SeedData
                    Credits = 4
                }
            );
+            context.SaveChanges();
 
             context.Enrollments.AddRange(
                new Enrollment
                {
-                   StudentID = 1,
+                   StudentID = 5,
                    CourseID = 1050,
                    Grade = Grade.A
 
@@ -87,13 +87,13 @@ public static class SeedData
                },
                new Enrollment
                {
-                   StudentID = 1,
+                   StudentID = 7,
                    CourseID = 4022,
                    Grade = Grade.C
                },
                new Enrollment
                {
-                   StudentID = 2,
+                   StudentID = 8,
                    CourseID = 2021,
                    Grade = Grade.F
                },
